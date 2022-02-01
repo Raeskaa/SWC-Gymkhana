@@ -1,0 +1,50 @@
+{% load static %}
+<div class="hidden md:block">
+    <div class="pb-20 h-96 blocka" style="
+                background-image: url(https://raw.githubusercontent.com/swciitg/SA_Portal_2021/main/frontend/src/assets/teamsbg.png);
+            ">
+        <div class="text-xl sm:text-2xl sm:ml-8 md:text-4xl md:ml-32 font-semibold text-white pt-8 md:pt-28">
+            Team Structure
+        </div>
+        <div class="sm:ml-10 md:ml-36 pt-4">
+            {% for panel,list in senators.items %}
+            <button id="senator-button-{{forloop.counter0}}"
+                class="bg-white text-black px-4 h-9 rounded-lg text-xs md:text-sm m-1.5 focus:outline-none">
+                {{panel}}</button>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% for panel,list in senators.items %}
+<div class="hidden md:relative md:-top-20 lg:-top-32" id="senator-tab-{{forloop.counter0}}">
+    <div class="md:flex md:flex-wrap justify-center">
+        {% for member in list %}
+        <div class="md:w-1/2 lg:w-1/4 hidden md:block overflow-hidden bg-blue-600 rounded-md mb-24 mx-4"
+            style="height: 450px">
+            <div class="bg-gray-200 rounded-md">
+                <img src="senate/media/{{ member.image }}" alt="ProfilePic" class="w-full object-contain"
+                    style="height: 300px" />
+            </div>
+            <div class="ml-3.5 text-2xl text-white font-semibold mt-4">
+                {{member.name}}
+            </div>
+            <div class="ml-3.5 text-lg text-white mt-2 mb-2">
+                {{member.position}}
+            </div>
+            <svg class="w-full" width="200" height="1" viewBox="0 0 420 1" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <line x1="0.5" y1="0.5" x2="419.5" y2="0.500031" stroke="white" stroke-linecap="round"></line>
+            </svg>
+            <div class="flex justify-between mx-3.5 my-2">
+                <div class="text-sm text-white">{{member.email}}</div>
+                <div class="text-sm text-white">{{member.mobile}}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+<script>
+    var panel_list = "{{panel_list|escapejs}}"
+</script>
+<script src="{% static 'Home/senators.js' %}"></script>
