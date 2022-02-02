@@ -17,6 +17,11 @@ Use a better box model (opinionated).
   box-sizing: border-box;
 }
 
+.text-para{
+  padding-right: 1rem; 
+  padding-top: 1 rem;
+  padding-bottom: 1 rem;
+}
 /**
 Use a more readable tab size (opinionated).
 */

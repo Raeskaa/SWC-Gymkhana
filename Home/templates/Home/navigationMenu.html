@@ -1,7 +1,3 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'Home/dropdown.css' %}" />
-
-
 <div class="header bg-white py-1">
     <div class="container flex justify-center mb-1.5 mt-0.5 ml-auto mr-auto">
         <span class="float-left"><img
@@ -14,7 +10,6 @@
         </span>
     </div>
 </div>
-
 <div id="TopNav" class="mt-2 flex md:justify-between w-full" style="z-index: 1000">
     <div class="flex flex-grow justify-between" id="nav-content">
         <div class="null flex-grow flex items-center justify-center text-sm font-mono h-20 px-2 text-white bg-blue-600 hover:bg-blue-600 font-bold text-xs"
@@ -24,7 +19,7 @@
         {% for board in boards %}
 
         <div class="null topNavTab hidden flex-grow md:flex items-center justify-center text-sm font-mono text-black hover:bg-gray-100 h-20 font-bold px-2 text-xs"
-            style="cursor: pointer; width: max-content;" id="board-tab-{{board.id}}">
+            style="cursor: pointer" id="board-tab-{{board.id}}">
             <p class="text-center text-sm text-blue-600">{{ board.boardName }}
             <div id="{{ board.id }}-dropdown" class="hidden">
                 <div class="content" style="width: 100%; padding: 20px; margin-top: 40px;">
@@ -73,10 +68,3 @@
                 </div>
             </div>
         </div>
-        {% endfor %}
-    </div>
-    <script>
-        var board_list = JSON.parse("{{board_list|escapejs}}")
-    </script>
-    <script src="{% static 'Home/navbar.js' %}"></script>
-</div>
