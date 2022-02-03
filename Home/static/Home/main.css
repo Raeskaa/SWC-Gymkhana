@@ -17,11 +17,6 @@ Use a better box model (opinionated).
   box-sizing: border-box;
 }
 
-.text-para{
-  padding-right: 1rem; 
-  padding-top: 1 rem;
-  padding-bottom: 1 rem;
-}
 /**
 Use a more readable tab size (opinionated).
 */
@@ -12879,7 +12874,7 @@ video {
 }
 
 .mb-24 {
-  margin-bottom: 6rem;
+  margin-bottom: -1rem;
 }
 
 .ml-24 {
@@ -104547,7 +104542,7 @@ video {
   }
 
   .lg\:-top-32 {
-    top: -8rem;
+    top: -4rem;
   }
 
   .lg\:-right-32 {

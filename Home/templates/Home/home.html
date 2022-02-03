@@ -1,21 +1,40 @@
 {% extends "Home/base.html" %}
+<style>
+
+</style>
 {% load static %}
 {% block content %}
-<iframe src="{% url 'gymkhana-gallery' %}" frameborder="0" style="width: 100%;"></iframe>
+<iframe src="{% url 'gymkhana-gallery' %}" frameborder="0" style="width: 100%; height:40rem"></iframe>
 
-<div style="color: #2c2c2c; padding-left: 30px;padding-top: 100px;padding-right: 300px;">
+<div class="home-text">
     <h4 style=" font-size: 25px;">Welcome to the Students' Gymkhana
         Council,<br> IIT Guwahati</h4>
     <p class="text-para">{{about.text}}
     </p>
+
     <aside>
+        <div class="container3">
+            <ul>
+                <li class="dropdown3">
+                    <input type="checkbox" />
+                    <a href="#" data-toggle="dropdown">Minutes</a>
+                    <ul class="dropdown-menu3">
+                        {% for minute in minutes%}
+                        <li><a href="senate/media/{{minute.pdf}}">{{ minute.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- <aside>
         <h3>Meeting Minutes</h3>
         <ul>
             {% for minute in minutes%}
             <li><a href="senate/media/{{minute.pdf}}">{{ minute.title }}</a></li>
             {% endfor %}
         </ul>
-    </aside>
+    </aside> -->
 </div>
 
 {% endblock content %}
