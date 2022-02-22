@@ -9,7 +9,7 @@
   <!-- Header-->
    <h3 align="center">IITG Gymkhana</h3>
   <p align="center">
-    [STUDENT AFFAIR SECTION IITG- Website Link](https://swc.iitg.ac.in/stud/gymkhana )
+     [Students Web Committee IITG](https://swc.iitg.ac.in/stud/gymkhana )
     <br />
     <br />
   </p>
