@@ -9,7 +9,7 @@
   <!-- Header-->
    <h3 align="center">IITG Gymkhana</h3>
   <p align="center">
-     [Students Web Committee IITG](https://swc.iitg.ac.in/stud/gymkhana )
+     Students Web Committee IITG
     <br />
     <br />
   </p>
@@ -39,7 +39,7 @@
 
 ![image](https://user-images.githubusercontent.com/84667136/151690048-b8ac0391-1ce2-45df-b62e-1890a684f4f3.png)
 
-We redesigned the whole Gymkhana website while working with [Students Web Committee IITG](https://github.com/swciitg)
+We redesigned the whole [Gymkhana website](https://swc.iitg.ac.in/stud/gymkhana) while working with [Students Web Committee IITG](https://github.com/swciitg)
 
 Here's why:
 * The website wasn't dynamic and Responsive and a bit outdated
